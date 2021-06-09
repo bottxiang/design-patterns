@@ -1,5 +1,7 @@
 package singleton
-
+/**
+* 单例创建设计模式将类型的实例化限制为单个对象。
+*/
 import (
 	"sync"
 )

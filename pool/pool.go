@@ -1,5 +1,7 @@
 package pool
-
+/**
+* 对象池创建设计模式用于根据需求预期准备和保留多个实例。
+*/
 import "fmt"
 
 type Pool chan *Object

@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"pattern/singleton"
 	"pattern/pool"
+	"pattern/singleton"
+	"pattern/strategy"
 )
 
 func main() {
@@ -15,9 +16,8 @@ func main() {
 
 	//002.pool
 	p := pool.New(2)
-
 	select {
-	case obj := <- *p:
+	case obj := <-*p:
 		obj.Do()
 
 		*p <- obj
@@ -25,4 +25,11 @@ func main() {
 		// No more objects left — retry later or fail
 		return
 	}
+
+	//003.strategy
+	add := strategy.Operation{strategy.Addition{}}
+	fmt.Println(add.Operate(3, 4))
+
+	multiply := strategy.Operation{strategy.Multiplication{}}
+	fmt.Println(multiply.Operate(3, 4))
 }
