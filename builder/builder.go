@@ -1,5 +1,7 @@
 package main
-
+/**
+* 建造者模式将复杂对象的构造与其表示分离，以便相同的构造过程可以创建不同的表示。
+*/
 import "fmt"
 
 type Speed float64
