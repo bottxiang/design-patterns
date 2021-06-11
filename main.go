@@ -32,4 +32,7 @@ func main() {
 
 	multiply := strategy.Operation{strategy.Multiplication{}}
 	fmt.Println(multiply.Operate(3, 4))
+
+	//004.observer
+
 }
